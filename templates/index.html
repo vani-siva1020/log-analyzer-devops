@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Analyzer</title>
+</head>
+<body>
+    <h1>🚀 DevOps Log Analyzer</h1>
+
+    <form method="POST">
+        <textarea name="logs" rows="10" cols="50"
+        placeholder="Paste logs here..."></textarea><br><br>
+
+        <button type="submit">Analyze Logs</button>
+    </form>
+
+    {% if result %}
+    <hr>
+    <h2>Result</h2>
+    <p>Errors: {{ result.errors }}</p>
+    <p>Warnings: {{ result.warnings }}</p>
+    <p>Status: {{ result.status }}</p>
+    <p>Top Issue: {{ result.top_issue }}</p>
+    {% endif %}
+</body>
+</html>
